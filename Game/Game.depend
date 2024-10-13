@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1728752582 source:/home/hugodnf/Documents/CppProjects/Game/src/main.cpp
+	<exception>
+	<string>
+	<iostream>
+	"SDL2/SDL.h"
+	<Game.h>
+
+1728781015 /home/hugodnf/Documents/CppProjects/Game/include/Game.h
+	"SDL2/SDL.h"
+	<SDL2/SDL_image.h>
+	<iostream>
+
+1728783376 source:/home/hugodnf/Documents/CppProjects/Game/src/Game.cpp
+	"Game.h"
+
