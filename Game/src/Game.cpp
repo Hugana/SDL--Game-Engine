@@ -39,7 +39,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         isRunning = false;
     }
 
-    SDL_Surface* tmpSurface = IMG_Load("src/assets/ElfEnchanterIdleSide.png");
+    SDL_Surface* tmpSurface = IMG_Load("assets/ElfEnchanterIdleSide.png");
 
      if (!tmpSurface) {
         std::cout << "Failed to load image: " << IMG_GetError() << std::endl;
