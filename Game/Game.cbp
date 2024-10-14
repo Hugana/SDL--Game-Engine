@@ -37,9 +37,11 @@
 			<Add option="-lSDL2" />
 			<Add option="-lSDL2_image" />
 		</Linker>
+		<Unit filename="assets/ElfEnchanterIdleSide.png" />
 		<Unit filename="include/Game.h" />
+		<Unit filename="include/TextureManager.h" />
 		<Unit filename="src/Game.cpp" />
-		<Unit filename="src/assets/ElfEnchanterIdleSide.png" />
+		<Unit filename="src/TextureManager.cpp" />
 		<Unit filename="src/main.cpp" />
 		<Extensions />
 	</Project>

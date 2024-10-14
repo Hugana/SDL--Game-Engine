@@ -12,7 +12,7 @@ const int frameDelay = 1000 / fps;
 int main( int argc, char * argv[] )
 {
     Uint32 frameStart;
-    int frameTime;
+    Uint32 frameTime;
     game = new Game();
 
     game->init("Game", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, false);
