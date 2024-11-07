@@ -4,6 +4,7 @@
 #include "SDL2/SDL.h"
 #include <Game.h>
 
+
 Game *game = nullptr;
 
 const int fps = 60;

@@ -14,7 +14,7 @@
 1728783376 source:/home/hugodnf/Documents/CppProjects/Game/src/Game.cpp
 	"Game.h"
 
-1728833532 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/main.cpp
+1729082055 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/main.cpp
 	<exception>
 	<string>
 	<iostream>
@@ -29,10 +29,18 @@
 1728917364 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/Game.cpp
 	"Game.h"
 
-1728833169 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/TextureManager.cpp
+1728919417 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/TextureManager.cpp
 	"TextureManager.h"
 
-1728833355 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/TextureManager.h
+1728917441 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/TextureManager.h
 	"Game.h"
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+
+1729082015 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/GameObject.cpp
+	"GameObject.h"
+	"TextureManager.h"
+
+1728920717 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/GameObject.h
 	<SDL2/SDL_image.h>
 

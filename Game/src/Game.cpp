@@ -1,6 +1,7 @@
 #include "Game.h"
+#include <GameObject.h>
 
-SDL_Texture* playerTex;
+GameObject* player;
 SDL_Rect srcR, destR;
 
 Game::Game() // Initialize texture to nullptr
@@ -35,6 +36,10 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         }
 
         isRunning = true;
+
+        player = new GameObject("assets/ElfEnchanterIdleSide.png");
+
+
     } else {
         isRunning = false;
     }
@@ -55,11 +60,13 @@ void Game::handleEvents(){
 }
 
 void Game::update(){
+    player->Update();
 
 }
 
 void Game::render(){
     SDL_RenderClear(renderer);
+    player->Render();
     SDL_RenderPresent(renderer);
 }
 
