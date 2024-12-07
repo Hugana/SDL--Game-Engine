@@ -21,26 +21,35 @@
 	"SDL2/SDL.h"
 	<Game.h>
 
-1728781015 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/Game.h
+1733587081 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/Game.h
 	"SDL2/SDL.h"
 	<SDL2/SDL_image.h>
 	<iostream>
 
-1728917364 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/Game.cpp
+1733592427 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/Game.cpp
+	"Game.h"
+	<GameObject.h>
+
+1733586825 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/TextureManager.cpp
+	"TextureManager.h"
 	"Game.h"
 
-1728919417 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/TextureManager.cpp
-	"TextureManager.h"
-
-1728917441 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/TextureManager.h
+1733593532 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/TextureManager.h
 	"Game.h"
 	<SDL2/SDL.h>
 	<SDL2/SDL_image.h>
 
-1729082015 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/GameObject.cpp
+1733592297 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/GameObject.cpp
 	"GameObject.h"
 	"TextureManager.h"
 
-1728920717 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/GameObject.h
+1733592397 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/GameObject.h
 	<SDL2/SDL_image.h>
+
+1733593068 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/TileMap.cpp
+	"TileMap.h"
+	"TextureManager.h"
+
+1733592968 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/TileMap.h
+	"Game.h"
 

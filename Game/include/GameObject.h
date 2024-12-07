@@ -6,20 +6,20 @@
 class GameObject
 {
     public:
-        GameObject(const char* textureSheet, SDL_Renderer* ren);
+        GameObject(const char* textureSheet,int x, int y, int srcX, int srcY, int srcW, int srcH);
         virtual ~GameObject();
 
         void Update();
         void Render();
+        void SetSourceRect(int x, int y, int w, int h);
+        int xpos;
+        int ypos;
 
 
 
     protected:
 
     private:
-        int xpos;
-        int ypos;
-
         SDL_Texture* objTexture;
         SDL_Rect srcRect, destRect;
         SDL_Renderer* renderer;

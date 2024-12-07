@@ -21,12 +21,14 @@ class Game
 
         bool running();
 
+        static SDL_Renderer* renderer;
+
     protected:
 
     private:
         bool isRunning;
         SDL_Window *window;
-        SDL_Renderer* renderer;
+
 };
 
 #endif // GAME_H

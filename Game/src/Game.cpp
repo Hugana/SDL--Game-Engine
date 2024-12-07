@@ -4,6 +4,8 @@
 GameObject* player;
 SDL_Rect srcR, destR;
 
+SDL_Renderer* Game::renderer = nullptr;
+
 Game::Game() // Initialize texture to nullptr
 {
 
@@ -37,7 +39,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
         isRunning = true;
 
-        player = new GameObject("assets/ElfEnchanterIdleSide.png");
+        player = new GameObject("assets/ElfEnchanterIdleSide.png",0,0,0,0,16,16);
 
 
     } else {

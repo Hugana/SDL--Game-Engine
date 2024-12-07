@@ -1,4 +1,5 @@
 #include "TextureManager.h"
+#include "Game.h"
 
 TextureManager::TextureManager()
 {
@@ -23,5 +24,10 @@ SDL_Texture* TextureManager::LoadTexture(const char* filename){
 
     return tex;
 }
+
+void Draw(SDL_Texture* tex, const SDL_Rect* src, const SDL_Rect* dest) {
+    SDL_RenderCopy(Game::renderer, tex, src, dest);
+}
+
 
 
