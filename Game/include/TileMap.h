@@ -6,14 +6,14 @@ class TileMap
         TileMap();
         virtual ~TileMap();
 
-        void LoadMap();
+        void LoadMap(int arr[20][20]);
         void DrawMap();
 
     protected:
 
     private:
-        SDL_Rect* src, dest;
+        SDL_Rect src, dest;
         SDL_Texture* spriteSheet;
-        int map[20][20];
+        int currentLvl[20][20];
 
 };
