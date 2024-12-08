@@ -1,7 +1,9 @@
 #include "Game.h"
 #include <GameObject.h>
+#include <TileMap.h>
 
 GameObject* player;
+TileMap* level;
 SDL_Rect srcR, destR;
 
 SDL_Renderer* Game::renderer = nullptr;
@@ -39,6 +41,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
         isRunning = true;
 
+        level = new TileMap();
         player = new GameObject("assets/ElfEnchanterIdleSide.png",0,0,0,0,16,16);
 
 
@@ -68,6 +71,7 @@ void Game::update(){
 
 void Game::render(){
     SDL_RenderClear(renderer);
+    level->DrawMap();
     player->Render();
     SDL_RenderPresent(renderer);
 }
