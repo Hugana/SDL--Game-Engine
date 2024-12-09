@@ -39,10 +39,12 @@
 		</Linker>
 		<Unit filename="assets/16x16DungeonTileset.png" />
 		<Unit filename="assets/ElfEnchanterIdleSide.png" />
+		<Unit filename="include/ECS.h" />
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/GameObject.h" />
 		<Unit filename="include/TextureManager.h" />
 		<Unit filename="include/TileMap.h" />
+		<Unit filename="src/ECS.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/GameObject.cpp" />
 		<Unit filename="src/TextureManager.cpp" />
