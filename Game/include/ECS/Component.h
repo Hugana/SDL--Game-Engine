@@ -1,18 +1,19 @@
 #include <iostream>
 #include <vector>
-
 #include <memory>
+
+#pragma once
 
 class Entity; // Forward declaration
 
 // Base Component class
 class Component {
-public:
-    Entity* entity = nullptr; // The entity this component belongs to
+    public:
+        Entity* entity = nullptr; // The entity this component belongs to
 
-    virtual void init() {}
-    virtual void update() {}
-    virtual void draw() {}
+        virtual void init() {}
+        virtual void update() {}
+        virtual void draw() {}
 
-    virtual ~Component() = default;
+        virtual ~Component() = default;
 };

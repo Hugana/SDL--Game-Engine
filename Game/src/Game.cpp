@@ -1,10 +1,15 @@
 #include "Game.h"
 #include <GameObject.h>
 #include <TileMap.h>
+#include "Manager.h"
+#include "PositionComponent.h"
+#include "SpriteComponent.h"
 
 GameObject* player;
 TileMap* level;
 SDL_Rect srcR, destR;
+
+Manager manager;
 
 SDL_Renderer* Game::renderer = nullptr;
 
@@ -42,7 +47,9 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         isRunning = true;
 
         level = new TileMap();
-        player = new GameObject("assets/ElfEnchanterIdleSide.png",0,0,0,0,16,16);
+        Entity& player = manager.createEntity();
+        player.addComponent<PositionComponent>(0, 0); // Add a position component
+        player.addComponent<SpriteComponent>("assets/ElfEnchanterIdleSide.png", 0, 0, 16, 16);
 
 
     } else {
@@ -65,14 +72,15 @@ void Game::handleEvents(){
 }
 
 void Game::update(){
-    player->Update();
+    manager.refresh();
+    manager.update();
 
 }
 
 void Game::render(){
     SDL_RenderClear(renderer);
     level->DrawMap();
-    player->Render();
+    manager.draw();
     SDL_RenderPresent(renderer);
 }
 

@@ -1,3 +1,5 @@
+#include "Component.h"
+
 class Entity {
 private:
     bool active = true;

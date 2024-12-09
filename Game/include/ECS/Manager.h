@@ -1,3 +1,8 @@
+#include <vector>
+#include <memory>
+#include "Entity.h"
+#include <algorithm>
+
 class Manager {
     private:
         std::vector<std::unique_ptr<Entity>> entities; // List of all entities

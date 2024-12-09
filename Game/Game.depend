@@ -26,7 +26,7 @@
 	<SDL2/SDL_image.h>
 	<iostream>
 
-1733663600 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/Game.cpp
+1733767448 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/Game.cpp
 	"Game.h"
 	<GameObject.h>
 	<TileMap.h>
@@ -54,15 +54,28 @@
 1733629808 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/TileMap.h
 	"Game.h"
 
-1733747376 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/ECS/SpriteComponent.cpp
+1733779334 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/ECS/SpriteComponent.cpp
 	"SpriteComponent.h"
+	"TextureManager.h"
+	"Entity.h"
 
-1733747670 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/ECS/SpriteComponent.h
+1733779152 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/ECS/SpriteComponent.h
 	<iostream>
 	"Component.h"
+	"PositionComponent.h"
+	<SDL2/SDL_image.h>
 
-1733746285 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/ECS/Component.h
+1733767781 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/ECS/Component.h
 	<iostream>
 	<vector>
 	<memory>
+
+1733766896 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/ECS/PositionComponent.cpp
+	"PositionComponent.h"
+
+1733780940 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/ECS/PositionComponent.h
+	"Component.h"
+
+1733780818 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/ECS/Entity.h
+	"Component.h"
 
