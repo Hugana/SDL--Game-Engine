@@ -17,7 +17,7 @@ SpriteComponent::~SpriteComponent()
 }
 
 void SpriteComponent::init() {
-    std::cout << "SpriteComponent initialized.\n";
+    //std::cout << "SpriteComponent initialized.\n";
     positionComp = entity->getComponent<PositionComponent>();
     destRect.x = positionComp->getX();
     destRect.y = positionComp->getY();
@@ -27,10 +27,12 @@ void SpriteComponent::init() {
 }
 
 void SpriteComponent::update() {
-    std::cout << "Updating SpriteComponent.\n";
+    //std::cout << "Updating SpriteComponent.\n";
+    destRect.x = positionComp->getX();
+    destRect.y = positionComp->getY();
 }
 
 void SpriteComponent::draw() {
-    std::cout << "Drawing SpriteComponent.\n";
+    //std::cout << "Drawing SpriteComponent.\n";
     TextureManager::Draw(texture,srcRect,destRect);
 }

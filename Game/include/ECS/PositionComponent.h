@@ -1,19 +1,20 @@
 #include "Component.h"
+#include "Vector2D.h"
 #pragma once
 
 class PositionComponent : public Component
 {
     public:
-        PositionComponent(int x, int y);
+        PositionComponent(Vector2D v);
         virtual ~PositionComponent();
 
-        int getX();
-        int getY();
+        int getX() const;
+        int getY() const;
 
         void setPos(int x,int y);
         void setX(int x);
         void setY(int y);
 
     private:
-        int posx, posy;
+        Vector2D posVector;
 };

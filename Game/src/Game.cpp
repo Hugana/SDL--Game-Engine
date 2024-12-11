@@ -4,6 +4,7 @@
 #include "Manager.h"
 #include "PositionComponent.h"
 #include "SpriteComponent.h"
+#include "Vector2D.h"
 
 GameObject* player;
 TileMap* level;
@@ -48,9 +49,9 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
         level = new TileMap();
         Entity& player = manager.createEntity();
-        player.addComponent<PositionComponent>(0, 0); // Add a position component
+        player.addComponent<PositionComponent>(Vector2D(0,0));
         player.addComponent<SpriteComponent>("assets/ElfEnchanterIdleSide.png", 0, 0, 16, 16);
-
+        PositionComponent* posComp = player.getComponent<PositionComponent>();
 
     } else {
         isRunning = false;

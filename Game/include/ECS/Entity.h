@@ -41,13 +41,13 @@ public:
     }
 
 
-    template <typename T>
-    T* getComponent() {
-        for (auto& component : components) {
-            if (T* casted = dynamic_cast<T*>(component.get())) {
-                return casted;
+        template <typename T>
+        T* getComponent() {
+            for (auto& component : components) {
+                if (T* casted = dynamic_cast<T*>(component.get())) {
+                    return casted;
+                }
             }
+            return nullptr;
         }
-        return nullptr;
-    }
 };

@@ -44,11 +44,15 @@
 		<Unit filename="include/ECS/Component.h" />
 		<Unit filename="include/ECS/Entity.h" />
 		<Unit filename="include/ECS/Manager.h" />
+		<Unit filename="include/ECS/PositionComponent.h" />
 		<Unit filename="include/ECS/SpriteComponent.h" />
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/GameObject.h" />
 		<Unit filename="include/TextureManager.h" />
 		<Unit filename="include/TileMap.h" />
+		<Unit filename="include/Vector" />
+		<Unit filename="include/Vector2D.h" />
+		<Unit filename="src/ECS/PositionComponent.cpp" />
 		<Unit filename="src/ECS/SpriteComponent.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/GameObject.cpp" />

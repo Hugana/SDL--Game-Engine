@@ -1,9 +1,9 @@
 #include "PositionComponent.h"
+#include "Vector2D.h"
 
-PositionComponent::PositionComponent(int x, int y)
+PositionComponent::PositionComponent(Vector2D v)
 {
-    posx = x;
-    posy = y;
+    posVector = v;
 }
 
 PositionComponent::~PositionComponent()
@@ -11,26 +11,27 @@ PositionComponent::~PositionComponent()
     // Destructor
 }
 
-int PositionComponent::getX(){
-    return posx;
-}
-
-int PositionComponent::getY(){
-    return posy;
-}
-
-void PositionComponent::setPos(int x, int y)
+int PositionComponent::getX() const
 {
-    posx = x;
-    posy = y;
+    return posVector.getX();
+}
+
+int PositionComponent::getY() const
+{
+    return posVector.getY();
+}
+
+void PositionComponent::setPos(int x, int y) {
+    posVector.setX(x);
+    posVector.setY(y);
 }
 
 void PositionComponent::setX(int x)
 {
-    posx = x;
+    posVector.setX(x);
 }
 
 void PositionComponent::setY(int y)
 {
-    posy = y;
+    posVector.setY(y);
 }
