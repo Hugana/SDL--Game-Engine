@@ -5,8 +5,10 @@
 #include "PositionComponent.h"
 #include "SpriteComponent.h"
 #include "Vector2D.h"
+#include "AnimatedSprite.h"
 
-GameObject* player;
+
+
 TileMap* level;
 SDL_Rect srcR, destR;
 
@@ -41,7 +43,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
         renderer = SDL_CreateRenderer(window, -1, 0);
         if(renderer){
-            SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+            SDL_SetRenderDrawColor(renderer, 10, 10, 10, 0);
             std::cout << "Renderer created! \n";
         }
 
@@ -50,8 +52,12 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         level = new TileMap();
         Entity& player = manager.createEntity();
         player.addComponent<PositionComponent>(Vector2D(0,0));
-        player.addComponent<SpriteComponent>("assets/ElfEnchanterIdleSide.png", 0, 0, 16, 16);
-        PositionComponent* posComp = player.getComponent<PositionComponent>();
+        player.addComponent<AnimatedSprite>("assets/Characters/ElfEnchanterIdleSide.png", 0, 0, 16, 16, 4, static_cast<Uint32>(4));
+
+        Entity& enemy = manager.createEntity();
+        enemy.addComponent<PositionComponent>(Vector2D(32,0));
+        enemy.addComponent<AnimatedSprite>("assets/Characters/GoblinFighter.png", 0, 0, 16, 16, 4, static_cast<Uint32>(3));
+
 
     } else {
         isRunning = false;

@@ -26,7 +26,7 @@
 	<SDL2/SDL_image.h>
 	<iostream>
 
-1733882133 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/Game.cpp
+1733970365 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/Game.cpp
 	"Game.h"
 	<GameObject.h>
 	<TileMap.h>
@@ -34,6 +34,7 @@
 	"PositionComponent.h"
 	"SpriteComponent.h"
 	"Vector2D.h"
+	"AnimatedSprite.h"
 
 1733630601 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/TextureManager.cpp
 	"TextureManager.h"
@@ -92,4 +93,14 @@
 	<algorithm>
 
 1733881564 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/Vector2D.h
+
+1733970278 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/ECS/AnimatedSprite.cpp
+	"AnimatedSprite.h"
+	"TextureManager.h"
+	"Entity.h"
+
+1733970135 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/ECS/AnimatedSprite.h
+	<Component.h>
+	<PositionComponent.h>
+	<SDL2/SDL_image.h>
 
