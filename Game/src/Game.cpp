@@ -6,6 +6,8 @@
 #include "SpriteComponent.h"
 #include "Vector2D.h"
 #include "AnimatedSprite.h"
+#include "TextComponent.h"
+
 
 
 
@@ -48,6 +50,10 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         }
 
         isRunning = true;
+
+        Entity& text = manager.createEntity();
+        text.addComponent<PositionComponent>(Vector2D(64,64));
+        text.addComponent<TextComponent>("assets/Fonts/ConnectionIi-2wj8.otf", 255, 255, 255, 255, 100, "YA MANO");
 
         level = new TileMap();
         Entity& player = manager.createEntity();

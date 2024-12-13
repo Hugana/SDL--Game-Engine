@@ -12,6 +12,7 @@ class PositionComponent : public Component
         int getY() const;
 
         void setPos(int x,int y);
+        Vector2D getPos();
         void setX(int x);
         void setY(int y);
 

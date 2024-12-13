@@ -26,6 +26,11 @@ void PositionComponent::setPos(int x, int y) {
     posVector.setY(y);
 }
 
+Vector2D PositionComponent::getPos()
+{
+    return posVector;
+}
+
 void PositionComponent::setX(int x)
 {
     posVector.setX(x);
