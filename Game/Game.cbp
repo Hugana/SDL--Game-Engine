@@ -29,6 +29,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-lSDL2_ttf" />
 				</Linker>
 			</Target>
 		</Build>
@@ -46,6 +47,7 @@
 		<Unit filename="include/ECS/AnimatedSprite.h" />
 		<Unit filename="include/ECS/Component.h" />
 		<Unit filename="include/ECS/Entity.h" />
+		<Unit filename="include/ECS/InputComponent.h" />
 		<Unit filename="include/ECS/Manager.h" />
 		<Unit filename="include/ECS/PositionComponent.h" />
 		<Unit filename="include/ECS/SpriteComponent.h" />
@@ -56,12 +58,12 @@
 		<Unit filename="include/TileMap.h" />
 		<Unit filename="include/Vector2D.h" />
 		<Unit filename="src/ECS/AnimatedSprite.cpp" />
+		<Unit filename="src/ECS/InputComponent.cpp" />
 		<Unit filename="src/ECS/PositionComponent.cpp" />
 		<Unit filename="src/ECS/SpriteComponent.cpp" />
 		<Unit filename="src/ECS/TextComponent.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/GameObject.cpp" />
-		<Unit filename="src/TextComponent.cpp" />
 		<Unit filename="src/TextureManager.cpp" />
 		<Unit filename="src/TileMap.cpp" />
 		<Unit filename="src/main.cpp" />

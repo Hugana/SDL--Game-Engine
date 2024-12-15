@@ -7,6 +7,7 @@
 #include "Vector2D.h"
 #include "AnimatedSprite.h"
 #include "TextComponent.h"
+#include "InputComponent.h"
 
 
 
@@ -59,6 +60,8 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         Entity& player = manager.createEntity();
         player.addComponent<PositionComponent>(Vector2D(0,0));
         player.addComponent<AnimatedSprite>("assets/Characters/ElfEnchanterIdleSide.png", 0, 0, 16, 16, 4, static_cast<Uint32>(4));
+        player.addComponent<InputComponent>();
+
 
         Entity& enemy = manager.createEntity();
         enemy.addComponent<PositionComponent>(Vector2D(32,0));

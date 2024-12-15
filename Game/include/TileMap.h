@@ -1,5 +1,5 @@
 #include "Game.h"
-
+#pragma once
 class TileMap
 {
     public:

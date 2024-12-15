@@ -28,6 +28,7 @@ class Manager {
             }
         }
 
+
         void refresh() {
             entities.erase(std::remove_if(entities.begin(), entities.end(),
                 [](const std::unique_ptr<Entity>& entity) {
@@ -35,4 +36,5 @@ class Manager {
                 }),
                 entities.end());
         }
+
 };

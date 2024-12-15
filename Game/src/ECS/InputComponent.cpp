@@ -15,34 +15,40 @@ void InputComponent::init()
 {
     positionComp = entity->getComponent<PositionComponent>();
     posVector = positionComp->getPos();
+
 }
 
 void InputComponent::update()
 {
-    posVector = positionComp->getPos();
-}
+    if (!positionComp) return;
 
-void InputComponent::handleMovement(SDL_Event& event, TileMap* tilemap)
-{
-     if (event.type == SDL_KEYDOWN) {
 
-         switch (event.key.keysym.sym) {
-             case SDLK_UP:
-                 posVector + Vector2D(0,32);
-                 break;
-            case SDLK_DOWN:
-                posVector + Vector2D(0,-32);
-                break;
-            case SDLK_LEFT:
-                posVector + Vector2D(-32,0);
-                break;
-            case SDLK_RIGHT:
-                posVector + Vector2D(32,0);
-                break;
+    const Uint8* keyState = SDL_GetKeyboardState(nullptr);
+
+    if (canMove) {
+        if (keyState[SDL_SCANCODE_UP]) {
+            positionComp->setY(positionComp->getY() - 32);
+            canMove = false;
         }
-     }
+        else if (keyState[SDL_SCANCODE_DOWN]) {
+            positionComp->setY(positionComp->getY() + 32);
+            canMove = false;
+        }
+        else if (keyState[SDL_SCANCODE_LEFT]) {
+            positionComp->setX(positionComp->getX() - 32);
+            canMove = false;
+        }
+        else if (keyState[SDL_SCANCODE_RIGHT]) {
+            positionComp->setX(positionComp->getX() + 32);
+            canMove = false;
+        }
+    }
 
-
+    if (!keyState[SDL_SCANCODE_UP] && !keyState[SDL_SCANCODE_DOWN] &&
+        !keyState[SDL_SCANCODE_LEFT] && !keyState[SDL_SCANCODE_RIGHT]) {
+        canMove = true;
+    }
 }
+
 
 

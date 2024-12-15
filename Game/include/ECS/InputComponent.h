@@ -13,9 +13,8 @@ public:
     void init() override;
     void update() override;
 
-    void handleMovement(SDL_Event& event, TileMap* tileMap);
-
 private:
+    bool canMove;
     PositionComponent* positionComp;
     Vector2D posVector;
 };
