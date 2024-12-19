@@ -7,13 +7,15 @@
 class InputComponent : public Component
 {
 public:
-    InputComponent();
+    InputComponent(TileMap* tilemap);
     virtual ~InputComponent();
+    bool isMoveValid(int x, int y);
 
     void init() override;
     void update() override;
 
 private:
+    TileMap* tileMap;
     bool canMove;
     PositionComponent* positionComp;
     Vector2D posVector;

@@ -26,7 +26,7 @@
 	<SDL2/SDL_image.h>
 	<iostream>
 
-1734214336 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/Game.cpp
+1734622891 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/Game.cpp
 	"Game.h"
 	<GameObject.h>
 	<TileMap.h>
@@ -55,11 +55,11 @@
 1733592397 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/GameObject.h
 	<SDL2/SDL_image.h>
 
-1733694449 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/TileMap.cpp
+1734624302 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/TileMap.cpp
 	"TileMap.h"
 	"TextureManager.h"
 
-1734214353 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/TileMap.h
+1734622644 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/TileMap.h
 	"Game.h"
 
 1733793631 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/ECS/SpriteComponent.cpp
@@ -120,11 +120,12 @@
 	<PositionComponent.h>
 	<Vector2D.h>
 
-1734215491 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/ECS/InputComponent.cpp
+1734624249 source:/home/hugodnf/Documents/CppProjects/SDL-Game/Game/src/ECS/InputComponent.cpp
 	"InputComponent.h"
 	<Entity.h>
+	<TileMap.h>
 
-1734215412 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/ECS/InputComponent.h
+1734624229 /home/hugodnf/Documents/CppProjects/SDL-Game/Game/include/ECS/InputComponent.h
 	<Component.h>
 	<PositionComponent.h>
 	<Vector2D.h>

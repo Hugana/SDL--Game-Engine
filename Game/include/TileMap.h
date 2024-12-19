@@ -6,14 +6,15 @@ class TileMap
         TileMap();
         virtual ~TileMap();
 
-        void LoadMap(int arr[20][20]);
+        void LoadMap(int arr[25][25]);
         void DrawMap();
+        bool isWalkable(int x, int y);
 
     protected:
 
     private:
         SDL_Rect src, dest;
         SDL_Texture* spriteSheet;
-        int currentLvl[20][20];
+        int currentLvl[25][25];
 
 };

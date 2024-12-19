@@ -1,9 +1,11 @@
 #include "InputComponent.h"
 #include <Entity.h>
+#include <TileMap.h>
 
-InputComponent::InputComponent()
+InputComponent::InputComponent(TileMap* level)
 {
     // Constructor
+    tileMap = level;
 }
 
 InputComponent::~InputComponent()
@@ -18,6 +20,15 @@ void InputComponent::init()
 
 }
 
+bool InputComponent::isMoveValid(int newX, int newY)
+{
+
+    int tileX = newX / 32;
+    int tileY = newY / 32;
+
+    return tileMap->isWalkable(tileX, tileY);
+}
+
 void InputComponent::update()
 {
     if (!positionComp) return;
@@ -25,21 +36,25 @@ void InputComponent::update()
 
     const Uint8* keyState = SDL_GetKeyboardState(nullptr);
 
+
+
     if (canMove) {
+        int newX = posVector.getX();
+        int newY = posVector.getY();
+
         if (keyState[SDL_SCANCODE_UP]) {
-            positionComp->setY(positionComp->getY() - 32);
-            canMove = false;
+            newY -= 32; // Move up
+        } else if (keyState[SDL_SCANCODE_DOWN]) {
+            newY += 32; // Move down
+        } else if (keyState[SDL_SCANCODE_LEFT]) {
+            newX -= 32; // Move left
+        } else if (keyState[SDL_SCANCODE_RIGHT]) {
+            newX += 32; // Move right;
         }
-        else if (keyState[SDL_SCANCODE_DOWN]) {
-            positionComp->setY(positionComp->getY() + 32);
-            canMove = false;
-        }
-        else if (keyState[SDL_SCANCODE_LEFT]) {
-            positionComp->setX(positionComp->getX() - 32);
-            canMove = false;
-        }
-        else if (keyState[SDL_SCANCODE_RIGHT]) {
-            positionComp->setX(positionComp->getX() + 32);
+
+
+        if (isMoveValid(newX, newY)) {
+            positionComp->setPos(newX, newY);
             canMove = false;
         }
     }
