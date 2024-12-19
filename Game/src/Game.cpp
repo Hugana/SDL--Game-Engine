@@ -55,12 +55,12 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         level = new TileMap();
 
         Entity& text = manager.createEntity();
-        text.addComponent<PositionComponent>(Vector2D(64,64));
-        text.addComponent<TextComponent>("assets/Fonts/ConnectionIi-2wj8.otf", 255, 255, 255, 255, 100, "YA MANO");
+        text.addComponent<PositionComponent>(Vector2D(192,128));
+        text.addComponent<TextComponent>("assets/Fonts/ConnectionIi-2wj8.otf", 255, 255, 255, 255, 10, "YA MANO");
 
 
         Entity& player = manager.createEntity();
-        player.addComponent<PositionComponent>(Vector2D(0,0));
+        player.addComponent<PositionComponent>(Vector2D(160,128));
         player.addComponent<AnimatedSprite>("assets/Characters/ElfEnchanterIdleSide.png", 0, 0, 16, 16, 4, static_cast<Uint32>(4));
         player.addComponent<InputComponent>(level);
 

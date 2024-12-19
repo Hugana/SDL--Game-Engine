@@ -19,4 +19,6 @@ private:
     bool canMove;
     PositionComponent* positionComp;
     Vector2D posVector;
+
+    void handleMovement(PositionComponent* positionComp, bool& canMove);
 };

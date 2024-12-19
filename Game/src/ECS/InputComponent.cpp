@@ -29,33 +29,33 @@ bool InputComponent::isMoveValid(int newX, int newY)
     return tileMap->isWalkable(tileX, tileY);
 }
 
-void InputComponent::update()
-{
+// Function to handle movement
+void InputComponent::handleMovement(PositionComponent* positionComp, bool& canMove) {
     if (!positionComp) return;
 
-
     const Uint8* keyState = SDL_GetKeyboardState(nullptr);
-
-
+    Vector2D currentPosition = positionComp->getPos();
 
     if (canMove) {
-        int newX = posVector.getX();
-        int newY = posVector.getY();
+        int newX = currentPosition.getX();
+        int newY = currentPosition.getY();
 
         if (keyState[SDL_SCANCODE_UP]) {
-            newY -= 32; // Move up
+            newY -= 32;
+            canMove = false;
         } else if (keyState[SDL_SCANCODE_DOWN]) {
-            newY += 32; // Move down
+            newY += 32;
+            canMove = false;
         } else if (keyState[SDL_SCANCODE_LEFT]) {
-            newX -= 32; // Move left
+            newX -= 32;
+            canMove = false;
         } else if (keyState[SDL_SCANCODE_RIGHT]) {
-            newX += 32; // Move right;
+            newX += 32;
+            canMove = false;
         }
 
-
-        if (isMoveValid(newX, newY)) {
+        if (!canMove && isMoveValid(newX, newY)) {
             positionComp->setPos(newX, newY);
-            canMove = false;
         }
     }
 
@@ -65,5 +65,9 @@ void InputComponent::update()
     }
 }
 
+// Update function
+void InputComponent::update() {
+    if (!positionComp) return;
 
-
+    handleMovement(positionComp, canMove);
+}
