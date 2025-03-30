@@ -131,3 +131,118 @@
 	<Vector2D.h>
 	<TileMap.h>
 
+1743120868 source:/home/hugana/Documents/GitHub/SDL--Game-Engine/Game/src/ECS/AnimatedSprite.cpp
+	"AnimatedSprite.h"
+	"TextureManager.h"
+	"Entity.h"
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/ECS/AnimatedSprite.h
+	<Component.h>
+	<PositionComponent.h>
+	<SDL2/SDL_image.h>
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/ECS/Component.h
+	<iostream>
+	<vector>
+	<memory>
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/ECS/PositionComponent.h
+	"Component.h"
+	"Vector2D.h"
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/Vector2D.h
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/TextureManager.h
+	"Game.h"
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/Game.h
+	"SDL2/SDL.h"
+	<SDL2/SDL_image.h>
+	<iostream>
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/ECS/Entity.h
+	"Component.h"
+
+1743120868 source:/home/hugana/Documents/GitHub/SDL--Game-Engine/Game/src/ECS/InputComponent.cpp
+	"InputComponent.h"
+	<Entity.h>
+	<TileMap.h>
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/ECS/InputComponent.h
+	<Component.h>
+	<PositionComponent.h>
+	<Vector2D.h>
+	<TileMap.h>
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/TileMap.h
+	"Game.h"
+
+1743120868 source:/home/hugana/Documents/GitHub/SDL--Game-Engine/Game/src/ECS/PositionComponent.cpp
+	"PositionComponent.h"
+	"Vector2D.h"
+
+1743120868 source:/home/hugana/Documents/GitHub/SDL--Game-Engine/Game/src/ECS/SpriteComponent.cpp
+	"SpriteComponent.h"
+	"TextureManager.h"
+	"Entity.h"
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/ECS/SpriteComponent.h
+	<iostream>
+	"Component.h"
+	"PositionComponent.h"
+	<SDL2/SDL_image.h>
+
+1743120868 source:/home/hugana/Documents/GitHub/SDL--Game-Engine/Game/src/ECS/TextComponent.cpp
+	"TextComponent.h"
+	<SDL2/SDL_image.h>
+	<PositionComponent.h>
+	"Entity.h"
+	"TextureManager.h"
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/ECS/TextComponent.h
+	<SDL2/SDL_image.h>
+	<Component.h>
+	<PositionComponent.h>
+	<Vector2D.h>
+
+1743120868 source:/home/hugana/Documents/GitHub/SDL--Game-Engine/Game/src/Game.cpp
+	"Game.h"
+	<GameObject.h>
+	<TileMap.h>
+	"Manager.h"
+	"PositionComponent.h"
+	"SpriteComponent.h"
+	"Vector2D.h"
+	"AnimatedSprite.h"
+	"TextComponent.h"
+	"InputComponent.h"
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/GameObject.h
+	<SDL2/SDL_image.h>
+
+1743120868 /home/hugana/Documents/GitHub/SDL--Game-Engine/Game/include/ECS/Manager.h
+	<vector>
+	<memory>
+	"Entity.h"
+	<algorithm>
+
+1743120868 source:/home/hugana/Documents/GitHub/SDL--Game-Engine/Game/src/GameObject.cpp
+	"GameObject.h"
+	"TextureManager.h"
+
+1743126931 source:/home/hugana/Documents/GitHub/SDL--Game-Engine/Game/src/main.cpp
+	<SDL3/SDL.h>
+	<SDL3/SDL_main.h>
+	<string>
+
+1743125333 source:/home/hugana/Documents/GitHub/SDL--Game-Engine/Game/src/TextureManager.cpp
+	"TextureManager.h"
+	"Game.h"
+	<SDL2/SDL_ttf.h>
+
+1743125096 source:/home/hugana/Documents/GitHub/SDL--Game-Engine/Game/src/TileMap.cpp
+	"TileMap.h"
+	"TextureManager.h"
+

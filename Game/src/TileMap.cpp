@@ -63,10 +63,10 @@ void TileMap::LoadMap(int arr[25][25]) // Correctly qualified as TileMap::LoadMa
 bool TileMap::isWalkable(int x, int y)
 {
     if (x < 0 || y < 0 || x >= 25 || y >= 25) {
-        #std::cout << "Out of bounds: (" << x << ", " << y << ")" << std::endl;
+        std::cout << "Out of bounds: (" << x << ", " << y << ")" << std::endl;
         return false;
     }
-    #std::cout << "Checking walkability at (" << x << ", " << y << "): " << currentLvl[y][x] << std::endl;
+    std::cout << "Checking walkability at (" << x << ", " << y << "): " << currentLvl[y][x] << std::endl;
     return currentLvl[y][x] == 1;
 }
 
